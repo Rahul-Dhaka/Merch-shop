@@ -20,7 +20,7 @@ const Navbar = () => {
             </svg>
           </button>
         </div>
-        <div className={`lg:flex lg:items-center bg-blue-500 w-full ${isOpen ? 'relative left-0 top-12 z-10' : 'hidden'} lg:w-auto`}>
+        <div className={`lg:flex lg:items-center bg-blue-500 w-full ${isOpen ? 'absolute left-0 top-12 z-10' : 'hidden'} lg:w-auto`}>
           <div className="text-[13px] font-semibold lg:flex-grow px-4 pb-2 lg:pb-0">
             <Link to="/" className="block mt-2  lg:inline-block lg:mt-0 text-white hover:text-gray-200 mr-4 pb-2 border-b lg:mr-8 lg:pb-0 lg:border-0" > HOME </Link>
             <Link to="/shop" className="block mt-2 lg:inline-block lg:mt-0 text-white hover:text-gray-200 mr-4 pb-2 border-b lg:mr-8 lg:pb-0 lg:border-0" > SHOP </Link>
