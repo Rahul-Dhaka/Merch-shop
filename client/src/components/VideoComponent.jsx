@@ -10,11 +10,11 @@ const VideoComponent = () => {
   }, []);
 
   return (
-    <div className="relative w-full h-full overflow-hidden mx-auto bg-black ">
+    <div className="relative w-full h-full overflow-hidden mx-auto bg-black  ">
       <video
         ref={videoRef}
         controlsList="nodownload"
-        className="w-full h-screen object-cover"
+        className="w-full h-screen object-cover "
         autoPlay
         loop
         muted // Add this if you want the video to be muted by default
@@ -23,7 +23,7 @@ const VideoComponent = () => {
         Your browser does not support the video tag.
       </video>
       <div className="absolute inset-0 bg-[rgba(0,0,0,0.2)] flex items-center justify-center ">
-        <button className="bg-blue-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:shadow-outline">
+        <button className="bg-blue-500 text-white font-bold py-2 px-4 absolute top-72 rounded-lg hover:bg-blue-700 focus:outline-none focus:shadow-outline">
           Shop Now
         </button>
       </div>

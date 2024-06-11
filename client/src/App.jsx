@@ -10,7 +10,10 @@ function App() {
     <>
     <div className='h-screen w-screen overflow-hidden'>
     <Navbar/>
+    <div className='h-full w-screen mt-12 overflow-y-scroll '>
     <Outlet/>
+    </div>
+    
     </div>
     
     </>
