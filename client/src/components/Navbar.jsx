@@ -10,7 +10,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-blue-500 p-4 h-12 flex items-center fixed top-0 z-10 w-full">
+    <nav className="bg-theme-primary p-4 h-12 flex items-center fixed top-0 z-10 w-full">
       <div className="container mx-auto flex justify-between items-center">
         <div className="text-white text-xl font-bold"><Link to="/">Brand</Link></div>
         <div className="block lg:hidden">
@@ -20,16 +20,16 @@ const Navbar = () => {
             </svg>
           </button>
         </div>
-        <div className={`lg:flex lg:items-center bg-blue-500 w-full ${isOpen ? 'absolute left-0 top-12 z-10' : 'hidden'} lg:w-auto`}>
+        <div className={`lg:flex lg:items-center bg-theme-primary w-full ${isOpen ? 'absolute left-0 top-12 z-10' : 'hidden'} lg:w-auto`}>
           <div className="text-[13px] font-semibold lg:flex-grow px-4 pb-2 lg:pb-0">
-            <Link to="/" className="block mt-2  lg:inline-block lg:mt-0 text-white hover:text-gray-200 mr-4 pb-2 border-b lg:mr-8 lg:pb-0 lg:border-0" > HOME </Link>
-            <Link to="/shop" className="block mt-2 lg:inline-block lg:mt-0 text-white hover:text-gray-200 mr-4 pb-2 border-b lg:mr-8 lg:pb-0 lg:border-0" > SHOP </Link>
-            <Link to="/services" className="block mt-2  lg:inline-block lg:mt-0 text-white hover:text-gray-200 mr-4 pb-2 border-b lg:mr-8 lg:pb-0 lg:border-0" > SERVICES </Link>
-            <Link to="/contact" className="block mt-2  lg:inline-block lg:mt-0 text-white hover:text-gray-200 mr-4 lg:mr-8 " > CONTACT </Link>
+            <Link to="/" className="block mt-2  lg:inline-block lg:mt-0 text-white hover:text-theme-accent mr-4 pb-2 border-b lg:mr-8 lg:pb-0 lg:border-0" onClick={() => setIsOpen(false)}> HOME </Link>
+            <Link to="/shop" className="block mt-2 lg:inline-block lg:mt-0 text-white hover:text-theme-accent mr-4 pb-2 border-b lg:mr-8 lg:pb-0 lg:border-0" onClick={() => setIsOpen(false)}> SHOP </Link>
+            <Link to="/services" className="block mt-2  lg:inline-block lg:mt-0 text-white hover:text-theme-accent mr-4 pb-2 border-b lg:mr-8 lg:pb-0 lg:border-0" onClick={() => setIsOpen(false)}> SERVICES </Link>
+            <Link to="/contact" className="block mt-2  lg:inline-block lg:mt-0 text-white hover:text-theme-accent mr-4 lg:mr-8 " onClick={() => setIsOpen(false)}> CONTACT </Link>
           </div>
         </div>
       </div>
-      <div className=' p-4 text-white text-md'><i className="fas fa-shopping-cart"></i></div>
+      <div className=' p-4 text-white hover:text-theme-accent hover:cursor-pointer text-md'><i className="fas fa-shopping-cart"></i></div>
 
     </nav>
   );
