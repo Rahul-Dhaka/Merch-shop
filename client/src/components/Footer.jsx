@@ -5,11 +5,7 @@ const Footer = () => {
     <footer className="bg-white text-black py-8 w-full border-t">
       <div className=" container mx-auto px-4">
         <div className="flex flex-wrap  justify-between">
-          {/* Logo Section */}
-          <div className="w-full md:w-1/5 mb-6 md:mb-0">
-            <img src="/path-to-your-logo.png" alt="Logo" className="h-16" />
-            <p className="mt-4">&copy; 2024, Sourabh and Company</p>
-          </div>
+          
 
           {/* Main Menu */}
           <div className="w-full md:w-1/5 mb-6 md:mb-0">
@@ -48,6 +44,12 @@ const Footer = () => {
               <a href="#" className="text-black hover:text-gray-600"><i className="fab fa-instagram"></i></a>
               <a href="#" className="text-black hover:text-gray-600"><i className="fab fa-youtube"></i></a>
             </div>
+          </div>
+
+          {/* Logo Section */}
+          <div className="w-full md:w-1/5 mb-6 md:mb-0 flex flex-col items-center">
+            <img src="/MerchShop.png" alt="Logo" className="h-16" />
+            <p className="mt-4">&copy; 2024, MerchShop</p>
           </div>
         </div>
 

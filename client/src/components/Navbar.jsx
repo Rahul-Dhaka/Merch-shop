@@ -12,7 +12,7 @@ const Navbar = () => {
   return (
     <nav className="bg-theme-primary p-4 h-12 flex items-center fixed top-0 z-10 w-full">
       <div className="container mx-auto flex justify-between items-center">
-        <div className="text-white text-xl font-bold"><Link to="/">Brand</Link></div>
+        <div className="text-white text-xl font-bold  pb-2"><Link to="/"><img src="/MerchShop.png" alt="MerchShop" className='h-12' /></Link></div>
         <div className="block lg:hidden">
           <button onClick={toggleMenu} className="text-white focus:outline-none mt-2">
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" >
