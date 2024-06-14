@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import menuIcon from '../assets/MenuIcon.svg'
+import CartModal from './CartModal';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isCartOpen, setIsCartOpen] = useState(false);
+  const [items, setItems] = useState(['Item 1', 'Item 2', 'Item 3']);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -29,8 +32,8 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      <div className=' p-4 text-white hover:text-theme-accent hover:cursor-pointer text-md'><i className="fas fa-shopping-cart"></i></div>
-
+      <div className=' p-4 text-white hover:text-theme-accent hover:cursor-pointer text-md' onClick={()=>{setIsCartOpen(true)}}> <i className="fas fa-shopping-cart"></i></div>
+        <CartModal isOpen={isCartOpen} onClose={() => setIsCartOpen(false)} items={items} />
     </nav>
   );
 };
