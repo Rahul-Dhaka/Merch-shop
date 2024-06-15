@@ -23,7 +23,7 @@ const Navbar = () => {
             </svg>
           </button>
         </div>
-        <div className={`lg:flex lg:items-center bg-theme-primary w-full ${isOpen ? 'absolute left-0 top-12 z-10' : 'hidden'} lg:w-auto`}>
+        <div className={`lg:flex lg:items-center bg-theme-primary w-full  ${isOpen ? 'absolute  left-0 top-12 z-10' : 'hidden'} lg:w-auto`}>
           <div className="text-[13px] font-semibold lg:flex-grow px-4 pb-2 lg:pb-0">
             <Link to="/" className="block mt-2  lg:inline-block lg:mt-0 text-white hover:text-theme-accent mr-4 pb-2 border-b lg:mr-8 lg:pb-0 lg:border-0" onClick={() => setIsOpen(false)}> HOME </Link>
             <Link to="/shop" className="block mt-2 lg:inline-block lg:mt-0 text-white hover:text-theme-accent mr-4 pb-2 border-b lg:mr-8 lg:pb-0 lg:border-0" onClick={() => setIsOpen(false)}> SHOP </Link>
