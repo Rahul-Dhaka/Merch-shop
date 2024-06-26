@@ -1,10 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+import {addItem} from '../app/features/cart/cartSlice';
+import {useSelector, useDispatch } from 'react-redux';
+
 
 const ProductPage = () => {
     const {id} = useParams();
     const [product, setProduct] = useState(null);
     const [selectedSize, setSelectedSize] = useState('');
+    const dispatch = useDispatch();
 
     const fetchData = async () => {
         const response = await fetch(`https://fakestoreapi.com/products/${id}`);
@@ -14,6 +18,8 @@ const ProductPage = () => {
 
     useEffect(()=>{
         fetchData();
+        console.log(product);
+
     },[])
     
     const handleSizeChange = (event) => {
@@ -68,7 +74,7 @@ const ProductPage = () => {
 
 
               <div className="flex space-x-4">
-                <button className="bg-theme-primary text-white px-6 py-2 rounded-md flex items-center hover:bg-theme-secondary">
+                <button className="bg-theme-primary text-white px-6 py-2 rounded-md flex items-center hover:bg-theme-secondary" onClick={()=>dispatch(addItem(product))}>
                   {/* <FaShoppingCart className="h-5 w-5 mr-2" /> */}
                   <i className="fas fa-shopping-cart  h-5 w-5 mr-2"></i>
                   Add to Cart
