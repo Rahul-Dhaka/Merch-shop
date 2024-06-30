@@ -2,11 +2,15 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import menuIcon from '../assets/MenuIcon.svg'
 import CartModal from './CartModal';
+import { useSelector } from 'react-redux';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isCartOpen, setIsCartOpen] = useState(false);
-  const [items, setItems] = useState(['Item 1', 'Item 2', 'Item 3']);
+  const [cartItemsCount, setCartItemsCount] = useState(null);
+  const cartItems = useSelector((state)=> state.cart.items);
+  // setCartItemsCount(cartItems.length);
+  // console.log('cartItems: ', cartItemsCount);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -32,8 +36,11 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      <div className=' p-4 text-white hover:text-theme-accent hover:cursor-pointer text-md' onClick={()=>{setIsCartOpen(true)}}> <i className="fas fa-shopping-cart"></i></div>
-        <CartModal isOpen={isCartOpen} onClose={() => setIsCartOpen(false)} items={items} />
+      <div className=' p-4 text-white hover:text-theme-accent hover:cursor-pointer text-md' onClick={()=>{setIsCartOpen(true)}}>
+         <i className="fas fa-shopping-cart"></i>
+         <span className="absolute -mt-1 -ml-2 h-4 w-4 text-center bg-red-500 text-white text-xs rounded-full px-1">{cartItems.length}</span>
+         </div>
+        <CartModal isOpen={isCartOpen} onClose={() => setIsCartOpen(false)}  />
     </nav>
   );
 };

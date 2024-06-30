@@ -16,7 +16,7 @@ const CartModal = ({ isOpen, onClose, items }) => {
         <div className="fixed inset-0 bg-black bg-opacity-50 z-40" onClick={onClose} />
       )}
       <div
-        className={`fixed m-1 rounded-md top-0 right-0 w-80 h-full bg-white shadow-lg transform transition-transform duration-300 z-50 
+        className={`fixed m-1 rounded-md top-0 right-0 w-80 h-full bg-white shadow-lg transform transition-transform duration-300 z-50  
             ${isOpen ? 'translate-x-0' : 'translate-x-full' }`} >
         <button className="absolute top-3 right-4 text-gray-500 hover:text-gray-800 text-3xl px-2" onClick={onClose} > &times;  </button>
         <div className="p-4">
