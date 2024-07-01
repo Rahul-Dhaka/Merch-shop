@@ -55,7 +55,7 @@ const Footer = () => {
 
         {/* Email Subscription */}
         <div className="flex flex-wrap md:gap-4 items-center justify-center mt-8 ">
-          <input type="email" placeholder="Email" className="w-full md:w-3/5 px-4 py-2 border border-gray-300 rounded-md mb-4 md:mb-0" />
+          <input type="email" placeholder="Email" className="w-full md:w-2/5 px-4 py-2 border border-gray-300 rounded-md mb-4 md:mb-0" />
           <button className="w-full md:w-1/6    bg-black text-white px-4 py-2 rounded-md">Join</button>
         </div>
       </div>
