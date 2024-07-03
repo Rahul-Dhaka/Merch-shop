@@ -32,7 +32,7 @@ const CartModal = ({ isOpen, onClose, items }) => {
                     <img src={item.image} alt="" />
                     <div className="flex text-sm flex-col h-full w-full overflow-hidden justify-around">
                     <h1 className="inline  truncate overflow-hidden whitespace-nowrap font-semibold">{item.title}</h1>
-                    <h2>Price : <span className="font-semibold">{item.price}</span> </h2>
+                    <h2>Price : <span className="font-semibold">$ {item.price}</span> </h2>
                     <label>Quantity : <input type="number" className="w-12 border-2"/></label>
                     </div>
                     <button className='text-red-500' onClick={()=>dispatch(removeItem(item))}><i className="fas fa-trash"></i></button>
