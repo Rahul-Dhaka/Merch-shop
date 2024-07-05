@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { removeItem, clearCart } from '../app/features/cart/cartSlice';
+import { removeItem, updateQuantity, clearCart } from '../app/features/cart/cartSlice';
 import {useSelector, useDispatch } from 'react-redux';
 
 const CartModal = ({ isOpen, onClose, items }) => {
@@ -24,7 +24,8 @@ const CartModal = ({ isOpen, onClose, items }) => {
           {items2.length === 0 ? (
             <p>Your cart is empty</p>
           ) : (
-            <ul>
+            <>
+            <ul className=' h-4/5 mb-4 overflow-y-scroll'>
               {items2.map((item, index) => (
                 <li key={index} className="border-b py-2 flex justify-between ">
                   
@@ -33,17 +34,18 @@ const CartModal = ({ isOpen, onClose, items }) => {
                     <div className="flex text-sm flex-col h-full w-full overflow-hidden justify-around">
                     <h1 className="inline  truncate overflow-hidden whitespace-nowrap font-semibold">{item.title}</h1>
                     <h2>Price : <span className="font-semibold">$ {item.price}</span> </h2>
-                    <label>Quantity : <input type="number" className="w-12 border-2"/></label>
+                    <label>Quantity : <input type="number" className="w-12 border-2 text-center" value={item.quantity} onChange={(e)=>dispatch(updateQuantity({id:item.id, quantity:e.target.value}))}/></label>
                     </div>
                     <button className='text-red-500' onClick={()=>dispatch(removeItem(item))}><i className="fas fa-trash"></i></button>
 
                   </div>
                 </li>
               ))}
-              <button className="p-2 w-4/5 px-5 block mx-auto rounded border bg-slate-700 text-white">Checkout</button>
-              <button className="p-2 w-4/5 px-5 block m-2 mx-auto rounded border" onClick={()=>dispatch(clearCart())}>Clear cart</button>
+             
             </ul>
-            
+            <button className="p-2 w-4/5 px-5 block mx-auto rounded border bg-slate-700 text-white">Checkout</button>
+            <button className="p-2 w-4/5 px-5 block m-2 mx-auto rounded border" onClick={()=>dispatch(clearCart())}>Clear cart</button>
+            </>
           )}
         </div>
         
