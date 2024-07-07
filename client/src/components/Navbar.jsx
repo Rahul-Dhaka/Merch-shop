@@ -31,7 +31,7 @@ const Navbar = () => {
           <div className="text-[13px] font-semibold lg:flex-grow px-4 pb-2 lg:pb-0">
             <Link to="/" className="block mt-2  lg:inline-block lg:mt-0 text-white hover:text-theme-accent mr-4 pb-2 border-b lg:mr-8 lg:pb-0 lg:border-0" onClick={() => setIsOpen(false)}> HOME </Link>
             <Link to="/shop" className="block mt-2 lg:inline-block lg:mt-0 text-white hover:text-theme-accent mr-4 pb-2 border-b lg:mr-8 lg:pb-0 lg:border-0" onClick={() => setIsOpen(false)}> SHOP </Link>
-            <Link to="/services" className="block mt-2  lg:inline-block lg:mt-0 text-white hover:text-theme-accent mr-4 pb-2 border-b lg:mr-8 lg:pb-0 lg:border-0" onClick={() => setIsOpen(false)}> TRACK ORDER </Link>
+            <Link to="/track" className="block mt-2  lg:inline-block lg:mt-0 text-white hover:text-theme-accent mr-4 pb-2 border-b lg:mr-8 lg:pb-0 lg:border-0" onClick={() => setIsOpen(false)}> TRACK ORDER </Link>
             <Link to="/contact" className="block mt-2  lg:inline-block lg:mt-0 text-white hover:text-theme-accent mr-4 lg:mr-8 " onClick={() => setIsOpen(false)}> CONTACT </Link>
           </div>
         </div>
