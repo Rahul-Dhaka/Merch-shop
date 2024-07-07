@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom';
 
 const Login = () => {
 
@@ -19,9 +20,9 @@ const Login = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        // Here you would typically handle form submission (e.g., API call to login user)
+
         console.log('Form submitted:', formData);
-        // Reset form fields after submission
+
         setFormData({
             email: '',
             password: ''
@@ -109,6 +110,14 @@ const Login = () => {
                             >
                                 Log In
                             </button>
+                        </div>
+                        <div className="mt-2 text-sm text-center">
+                            <p className="text-gray-600">
+                                New to our site?{' '}
+                                <Link to="/SignUp" className="font-medium text-indigo-600 hover:text-indigo-500">
+                                    Create an account
+                                </Link>
+                            </p>
                         </div>
                     </form>
                 </div>
