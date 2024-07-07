@@ -44,7 +44,7 @@ const CartModal = ({ isOpen, onClose, items }) => {
               ))}
              
             </ul>
-            <button className="p-2 w-4/5 px-5 block mx-auto rounded border bg-slate-700 text-white" onClick={onClose}><Link to='/checkout'>Checkout</Link></button>
+            <Link to='/checkout'><button className="p-2 w-4/5 px-5 block mx-auto rounded border bg-slate-700 text-white" onClick={onClose}>Checkout</button></Link>
             <button className="p-2 w-4/5 px-5 block m-2 mx-auto rounded border" onClick={()=>dispatch(clearCart())}>Clear cart</button>
             </>
           )}
