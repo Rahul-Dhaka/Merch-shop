@@ -12,6 +12,7 @@ import {store} from './app/store.js';
 import { Provider } from 'react-redux'
 import { Checkout } from './Pages/Checkout.jsx'
 import Track from './Pages/Track.jsx'
+import Signup from './Pages/Signup.jsx'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -23,6 +24,8 @@ const router = createBrowserRouter(
       <Route path='product/:id' element={<ProductPage />}/>
       <Route path='checkout' element={<Checkout />}/>
       <Route path='track' element={<Track />} />
+      <Route path='signup' element={<Signup />} />
+
       {/* <Route path='login' element={<Login />}/> */}
       
     </Route> 
