@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const Services = () => {
+const Track = () => {
   const [trackingType, setTrackingType] = useState('orderID');
   const [trackingNumber, setTrackingNumber] = useState('');
   const [trackingDetails, setTrackingDetails] = useState(null);
@@ -27,7 +27,6 @@ const Services = () => {
       estimatedDelivery: 'July 15, 2024'
     });
   };
-
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="max-w-lg mx-auto">
@@ -100,4 +99,4 @@ const Services = () => {
   )
 }
 
-export default Services
+export default Track
