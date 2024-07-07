@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { removeItem, updateQuantity, clearCart } from '../app/features/cart/cartSlice';
 import {useSelector, useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 const CartModal = ({ isOpen, onClose, items }) => {
   const items2 = useSelector((state)=> state.cart.items );
@@ -43,7 +44,7 @@ const CartModal = ({ isOpen, onClose, items }) => {
               ))}
              
             </ul>
-            <button className="p-2 w-4/5 px-5 block mx-auto rounded border bg-slate-700 text-white">Checkout</button>
+            <button className="p-2 w-4/5 px-5 block mx-auto rounded border bg-slate-700 text-white" onClick={onClose}><Link to='/checkout'>Checkout</Link></button>
             <button className="p-2 w-4/5 px-5 block m-2 mx-auto rounded border" onClick={()=>dispatch(clearCart())}>Clear cart</button>
             </>
           )}
