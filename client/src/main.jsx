@@ -10,6 +10,7 @@ import Contactus from './Pages/Contactus.jsx'
 import ProductPage from './Pages/ProductPage.jsx'
 import {store} from './app/store.js';
 import { Provider } from 'react-redux'
+import { Checkout } from './Pages/Checkout.jsx'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -19,6 +20,7 @@ const router = createBrowserRouter(
       <Route path='services' element={<Services />}/>
       <Route path='contact' element={<Contactus />}/>
       <Route path='product/:id' element={<ProductPage />}/>
+      <Route path='checkout' element={<Checkout />}/>
       {/* <Route path='login' element={<Login />}/> */}
       
     </Route> 
