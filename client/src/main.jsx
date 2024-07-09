@@ -14,6 +14,7 @@ import { Checkout } from './Pages/Checkout.jsx'
 import Track from './Pages/Track.jsx'
 import Signup from './Pages/Signup.jsx'
 import Login from './Pages/Login.jsx'
+import Profile from './Pages/Profile.jsx'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -27,6 +28,7 @@ const router = createBrowserRouter(
       <Route path='track' element={<Track />} />
       <Route path='signup' element={<Signup />} />
       <Route path='login' element={<Login />} />
+      <Route path='profile' element={<Profile />} />
 
       {/* <Route path='login' element={<Login />}/> */}
       

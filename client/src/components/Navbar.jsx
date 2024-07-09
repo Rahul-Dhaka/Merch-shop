@@ -33,7 +33,11 @@ const Navbar = () => {
             <Link to="/shop" className="block mt-2 lg:inline-block lg:mt-0 text-white hover:text-theme-accent mr-4 pb-2 border-b lg:mr-8 lg:pb-0 lg:border-0" onClick={() => setIsOpen(false)}> SHOP </Link>
             <Link to="/track" className="block mt-2  lg:inline-block lg:mt-0 text-white hover:text-theme-accent mr-4 pb-2 border-b lg:mr-8 lg:pb-0 lg:border-0" onClick={() => setIsOpen(false)}> TRACK ORDER </Link>
             <Link to="/contact" className="block mt-2  lg:inline-block lg:mt-0 text-white hover:text-theme-accent mr-4 lg:mr-8 " onClick={() => setIsOpen(false)}> CONTACT </Link>
+
+            <Link to="/profile" className="block mt-2  lg:inline-block lg:mt-0 text-white hover:text-theme-accent mr-4 lg:mr-8 " onClick={() => setIsOpen(false)}> PROFILE </Link>
+
             <Link to="/login" className="block mt-2  lg:inline-block lg:mt-0 text-white hover:text-theme-accent mr-4 lg:mr-8 " onClick={() => setIsOpen(false)}> LOGIN </Link>
+
           </div>
         </div>
       </div>
