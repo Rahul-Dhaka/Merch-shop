@@ -85,6 +85,7 @@ export const Checkout = () => {
         <div className="text-right py-2 text-lg font-semibold">
           <strong>Total: ${totalAmount}</strong>
         </div>
+        <div className='w-full gap-4 mt-4 flex justify-center items-center'><input type="text" placeholder='Coupon code' className='w-4/5 border p-2 rounded outline-none'/><button className='w-2/5 bg-theme-accent border text-white p-2 rounded-md hover:bg-blue-600 active:bg-blue-700 transition transform duration-300 ease-in-out'>Apply Discount</button></div>
       </div>
       </div>
         <div className='w-full md-1/2'>

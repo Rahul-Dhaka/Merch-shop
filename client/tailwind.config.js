@@ -10,7 +10,7 @@ export default {
         theme: {
           primary: '#38726C',
           secondary: '#6B5B95',
-          accent: '#88B04B',
+          accent: '#1E293B',
           neutral: "#FFFFFF"
         }
       }

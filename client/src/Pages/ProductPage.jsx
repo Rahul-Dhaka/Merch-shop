@@ -8,6 +8,7 @@ const ProductPage = () => {
     const {id} = useParams();
     const [product, setProduct] = useState(null);
     const [selectedSize, setSelectedSize] = useState('');
+    const [error, setError] = useState('');
     const dispatch = useDispatch();
 
     const fetchData = async () => {
@@ -23,8 +24,26 @@ const ProductPage = () => {
     },[])
     
     const handleSizeChange = (event) => {
-        setSelectedSize(event.target.value);
-      };
+      setSelectedSize(event.target.value);
+      setError(''); // Clear the error message when a size is selected
+    };
+  
+    const handleAddToCart = () => {
+      if (!selectedSize) {
+        setError('Please select a size.');
+        return;
+      }
+      dispatch(addItem({ ...product, size: selectedSize }));
+    };
+  
+    const handleBuyNow = () => {
+      if (!selectedSize) {
+        setError('Please select a size.');
+        return;
+      }
+      // Handle the buy now action
+    };
+
 
     if(!product) return "loading...";
 
@@ -66,22 +85,25 @@ const ProductPage = () => {
               {['S', 'M', 'L', 'XL'].map((size) => (
                 <label key={size} className="flex items-center hover:cursor-pointer">
                   <input type="radio" name="size" value={size} checked={selectedSize === size} onChange={handleSizeChange} className="appearance-none"/>
-                  <span className={(selectedSize===size)? "px-2 border text-theme-accent border-theme-accent rounded-md" : " px-4 border text-gray-700 rounded-md"}>{size}</span>
+                  <span className={`inline-block cursor-pointer px-4 py-1 border rounded-md transition-all duration-300 ease-in-out ${selectedSize === size
+                                   ? 'text-white bg-theme-accent border-theme-accent shadow-lg transform scale-105'
+                                   : 'text-gray-700 bg-white border-gray-300 hover:text-theme-accent hover:border-theme-accent hover:bg-gray-100'}`}>
+                  {size}</span>               
                 </label>
               ))}
             </div>
           </div>
 
+          {error && <p className="text-red-500 mb-4">{error}</p>}
 
               <div className="flex space-x-4">
-                <button className="bg-theme-primary text-white px-6 py-2 rounded-md flex items-center hover:bg-theme-secondary" onClick={()=>dispatch(addItem(product))}>
-                  {/* <FaShoppingCart className="h-5 w-5 mr-2" /> */}
-                  <i className="fas fa-shopping-cart  h-5 w-5 mr-2"></i>
-                  Add to Cart
+                <button className="bg-theme-accent text-white px-6 py-2 rounded-md flex items-center hover:bg-blue-600 active:bg-blue-700 transition transform duration-300 ease-in-out hover:scale-105" onClick={handleAddToCart}>
+                  {/* <FaShoppingCart className="h-5 w-5 mr-2" /> */} <i className="fas fa-shopping-cart  h-5 w-5 mr-2"></i> Add to Cart
                 </button>
-                <button className="bg-theme-primary text-white px-6 py-2 rounded-md flex items-center hover:bg-theme-secondary">
+                <button className="bg-theme-accent border text-white px-6 py-2 rounded-md flex items-center hover:bg-blue-600 active:bg-blue-700 transition transform duration-300 ease-in-out hover:scale-105" onClick={handleBuyNow}>
                   Buy Now
                 </button>
+
               </div>
             </div>
           </div>
