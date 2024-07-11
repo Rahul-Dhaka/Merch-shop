@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { Navigate, useNavigate, useParams } from 'react-router-dom'
 import {addItem} from '../app/features/cart/cartSlice';
 import {useSelector, useDispatch } from 'react-redux';
 
@@ -10,6 +10,7 @@ const ProductPage = () => {
     const [selectedSize, setSelectedSize] = useState('');
     const [error, setError] = useState('');
     const dispatch = useDispatch();
+    const navigate = useNavigate();
 
     const fetchData = async () => {
         const response = await fetch(`https://fakestoreapi.com/products/${id}`);
@@ -42,6 +43,8 @@ const ProductPage = () => {
         return;
       }
       // Handle the buy now action
+      dispatch(addItem({ ...product, size: selectedSize }));
+      navigate('/checkout');
     };
 
 
