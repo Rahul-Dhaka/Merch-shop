@@ -23,7 +23,7 @@ const VideoComponent = () => {
         Your browser does not support the video tag.
       </video>
       <div className="absolute inset-0 bg-[rgba(0,0,0,0.4)] flex items-center justify-center ">
-        <button className="bg-theme-primary text-white font-bold py-2 px-4  rounded-lg hover:bg-blue-700 focus:outline-none focus:shadow-outline">
+        <button className="bg-theme-primary text-white font-bold py-2 px-4  rounded-lg hover:bg-theme-accent focus:outline-none focus:shadow-outline">
           Shop Now
         </button>
       </div>
