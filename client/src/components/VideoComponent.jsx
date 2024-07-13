@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const VideoComponent = () => {
   const videoRef = useRef(null);
@@ -23,9 +24,9 @@ const VideoComponent = () => {
         Your browser does not support the video tag.
       </video>
       <div className="absolute inset-0 bg-[rgba(0,0,0,0.4)] flex items-center justify-center ">
-        <button className="bg-theme-primary text-white font-bold py-2 px-4  rounded-lg hover:bg-theme-accent focus:outline-none focus:shadow-outline">
+        <Link to='/shop'><button className="bg-theme-primary text-white font-bold py-2 px-4  rounded-lg hover:bg-theme-accent focus:outline-none focus:shadow-outline">
           Shop Now
-        </button>
+        </button></Link>
       </div>
     </div>
   );

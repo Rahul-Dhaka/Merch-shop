@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import CartModal from '../components/CartModal';
+import ProductSection from '../components/ProductSection';
 
 const Shop = () => {
   const [isCartOpen, setIsCartOpen] = useState(false);
@@ -8,7 +9,7 @@ const Shop = () => {
 
   return (
   
-      <h1>I am shop page</h1>
+    <div className='w-full h-fit'><ProductSection/></div>
       
   );
 };
