@@ -101,7 +101,7 @@ const ProductPage = () => {
 
               <div className="flex space-x-4">
                 <button className="bg-theme-accent text-white px-6 py-2 rounded-md flex items-center hover:bg-blue-600 active:bg-blue-700 transition transform duration-200 ease-in-out  active:scale-95" onClick={handleAddToCart}>
-                  {/* <FaShoppingCart className="h-5 w-5 mr-2" /> */} <i className="fas fa-shopping-cart  h-5 w-5 mr-2"></i> Add to Cart
+                  {/* <FaShoppingCart className="h-5 w-5 mr-2" /> */} <i className="fas fa-shopping-cart  h-5 w-5 mr-2 mt-1"></i> Add to Cart
                 </button>
                 <button className="bg-theme-accent border text-white px-6 py-2 rounded-md flex items-center hover:bg-blue-600 active:bg-blue-700 transition transform duration-200 ease-in-out  active:scale-95" onClick={handleBuyNow}>
                   Buy Now
