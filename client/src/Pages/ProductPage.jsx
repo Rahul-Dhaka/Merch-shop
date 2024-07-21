@@ -66,7 +66,7 @@ const ProductPage = () => {
             <div className="lg:w-1/2">
               <h1 className="text-3xl font-bold mb-2">{product.title}</h1>
               <p className="text-gray-600 mb-4">{product.description}</p>
-              <p className="text-gray-800 mb-2"><strong>Category:</strong> {product.category}</p>
+              <p className="text-gray-800 mb-2"><strong>Category :</strong> {product.category}</p>
               <div className="flex items-center mb-4">
                 <span className="text-2xl font-semibold mr-2 flex items-center">
                   {/* <FaDollarSign className="mr-1" />{product.price} */}
