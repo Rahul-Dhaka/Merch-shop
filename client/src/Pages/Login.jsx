@@ -51,6 +51,7 @@ const Login = () => {
                                 id="email"
                                 name="email"
                                 type="email"
+                                placeholder='email address'
                                 value={formData.email}
                                 onChange={handleChange}
                                 autoComplete="email"
@@ -67,6 +68,7 @@ const Login = () => {
                                 id="password"
                                 name="password"
                                 type="password"
+                                placeholder='password'
                                 value={formData.password}
                                 onChange={handleChange}
                                 autoComplete="current-password"
