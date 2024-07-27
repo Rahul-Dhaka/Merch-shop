@@ -125,7 +125,7 @@ const Signup = () => {
                             <p className="text-gray-600">
                                 Exisiting User?{' '}
                                 <Link to="/login" className="font-medium text-indigo-600 hover:text-indigo-500">
-                                    Login instead
+                                    Login instead ..
                                 </Link>
                             </p>
                         </div>
